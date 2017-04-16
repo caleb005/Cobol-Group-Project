@@ -2,7 +2,7 @@
        PROGRAM-ID. MENU.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
-       01 MORE-TASKS   PIC X(3) VALUE 'YES'.
+*      01 MORE-TASKS   PIC X(3) VALUE 'YES'.
        01 OPTION       PIC X.
        01 WS-SNO       PIC 9(9).
        SCREEN SECTION.
@@ -21,7 +21,7 @@
            05 LINE 11 COL 15 VALUE "PRINT A REPORT   :P".
            05 LINE 12 COL 15 VALUE "EXIT             :X".
            05 LINE 14 COL 15 VALUE "ENTER LETTER OF SELECTION: ".
-           05 LINE 14 COL 15 PIC X(3) TO OPTION.
+           05 LINE 14 COL 15 PIC X TO OPTION.
        PROCEDURE DIVISION.
        100-MAIN.
            PERFORM UNTIL OPTION = 'X' OR 'x'
